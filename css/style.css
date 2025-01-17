@@ -104,7 +104,8 @@ font-weight:bold;
 font-size:24px;
 font-weight:500;
 }
-button{
+button,
+.btn1{
 padding:16px 50px;
 background:var(--pc);
 border:none;
@@ -116,7 +117,8 @@ font-weight:800;
 border-radius:6px;
 transition:.4s ease;
 }
-button:hover{
+button:hover, 
+.btn1:hover{
 transform: translateY(-6px);
 background:var(--black);
 color:var(--white);
