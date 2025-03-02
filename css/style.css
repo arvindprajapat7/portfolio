@@ -81,9 +81,18 @@ border-color:var(--sc);
 max-width:1300px;
 }
 header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+header.fixed-header{
 position:sticky;
 top:0;
 z-index:1000;
+box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+background:#fff;
 }
 header .navbar-nav .nav-item .nav-link{
 font-size:18px;
@@ -93,7 +102,7 @@ font-weight:700;
 margin-left:50px;
 }
 .main_banner{
-padding:100px 0px;
+padding:200px 0px 100px;
 }
 .main_banner .b_title{
 font-size:66px;
@@ -138,14 +147,22 @@ border-radius:10px;
 .skills {
 border-left:1px solid rgba(0,0,0,.1);
 }
-.skills ul li{
-padding:10px 20px;
-border-radius:6px;
-background:rgba(0,0,0,.1);
-margin: 0px 10px 10px 0px;
-text-transform:uppercase;
-letter-spacing:1px;
+.skills ul{
+    gap:20px;
 }
+.skills ul li{
+    border:1px solid rgba(0,0,0,.1);
+    border-radius: 5px;
+    padding:5px;
+}
+ .tooltip .tooltip-inner {
+    background-color: var(--pc);
+    color: #000; 
+  }
+  
+  .tooltip.bs-tooltip-top .arrow::before {
+    border-top-color: var(--pc) !important;
+  }
 /*portfolio css*/
 .p_card{
 height:260px;
@@ -187,6 +204,9 @@ z-index:100;
 header .navbar-nav .nav-item .nav-link {
 margin-left: 20px;
 }
+.skills{
+    border-left:none;
+}
 }
 @media(max-width:767px){
 header .navbar-nav{
@@ -215,6 +235,6 @@ font-size: 40px;
 font-size: 16px;
 }
 .main_banner {
-padding: 40px 0px;
+padding: 110px 0px 40px;
 }
 }
